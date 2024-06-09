@@ -13,7 +13,7 @@ const AddBook = () => {
         e.preventDefault();
         const newBook = { title, author, description, price };
 
-        axios.post('http://localhost:5000/api/books', newBook)
+        axios.post('https://book-store-28v8.onrender.com/books', newBook)
             .then(response => {
                 console.log(response.data);
                 navigate('/');

@@ -6,7 +6,7 @@ const BookList = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/books')
+        axios.get('https://book-store-28v8.onrender.com/books')
             .then(response => {
                 setBooks(response.data);
             })

@@ -9,7 +9,7 @@ const EditBook = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/books/${id}`)
+        axios.get(`https://book-store-28v8.onrender.com/api/books/${id}`)
             .then(response => {
                 setBook(response.data);
             })
@@ -20,7 +20,7 @@ const EditBook = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:5000/api/books/${id}`, book)
+        axios.put(`https://book-store-28v8.onrender.com/api/books/${id}`, book)
             .then(response => {
                 console.log(response.data);
                 navigate('/');
